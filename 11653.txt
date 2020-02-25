@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	int div;
+	int N, temp;
+	cin >> N;
+
+	div = 2;
+	temp = N;
+	while (temp != 1) {
+			
+		// 나뉘어 질 경우, 출력한 다음 그 수를 div로 나눈다.
+		if (temp % div == 0) {
+			printf("%d\n", div);
+			temp = temp / div;
+		}
+
+		// 나뉘지 않았을 경우, 나누는 숫자만 증가시킨다.
+		else {
+			div += 1;
+		}
+	}
+}
