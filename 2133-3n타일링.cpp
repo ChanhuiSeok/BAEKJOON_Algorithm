@@ -1,29 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstdio>
+#include <vector>
 #include <algorithm>
 
 using namespace std;
-int dp[31];
 
 int main() {
 
-	int N;
+	int N, age;
+	string name;
+	vector <pair<int, string>> v;
 	scanf("%d", &N);
 
-	dp[0] = 1;
-	dp[2] = 3;
-
-	for (int i = 4; i <= N; i = i + 2) {
-
-		dp[i] += dp[i - 2] * dp[2];
-
-		for (int j = 4; j <= i; j=j+2) {
-			dp[i] += 2 * dp[i - j];
-		}
-
+	for (int i = 0; i < N; i++) {
+		cin >> age >> name;
+		v.push_back()
 	}
 
-	printf("%d", dp[N]);
 	
 }
